@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/bangong/Desktop/git/Fan-Haoran_hw1/build",
+  "command": "/usr/bin/clang  -I/Users/bangong/Desktop/git/Fan-Haoran_hw1/inc -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/main.dir/src/algebra.o -c /Users/bangong/Desktop/git/Fan-Haoran_hw1/src/algebra.c",
+  "file": "/Users/bangong/Desktop/git/Fan-Haoran_hw1/src/algebra.c",
+  "output": "CMakeFiles/main.dir/src/algebra.o"
+},
+{
+  "directory": "/Users/bangong/Desktop/git/Fan-Haoran_hw1/build",
+  "command": "/usr/bin/clang  -I/Users/bangong/Desktop/git/Fan-Haoran_hw1/inc -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/main.dir/src/main.o -c /Users/bangong/Desktop/git/Fan-Haoran_hw1/src/main.c",
+  "file": "/Users/bangong/Desktop/git/Fan-Haoran_hw1/src/main.c",
+  "output": "CMakeFiles/main.dir/src/main.o"
+}
+]

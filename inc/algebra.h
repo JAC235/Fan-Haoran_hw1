@@ -1,3 +1,11 @@
+/*
+ * @Author: Haroun 2356125451@qq.com
+ * @Date: 2024-04-08 17:12:22
+ * @LastEditors: Haroun 2356125451@qq.com
+ * @LastEditTime: 2024-04-08 21:27:22
+ * @FilePath: /Fan-Haoran_hw1/inc/algebra.h
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 #ifndef ALGEBRA_H
 #define ALGEBRA_H
 
@@ -89,5 +97,38 @@ double trace_matrix(Matrix a);
  * @param a 矩阵a
 */
 void print_matrix(Matrix a);
+
+/**
+ * @brief 元素的代数余子式
+ * @param a 矩阵a
+ * @param row1 元素的行
+ * @param col1 元素的列
+ * @return a.data[row1][col1]的余子式
+*/
+Matrix cof(Matrix a, int row1, int col1);
+
+/**
+ * @brief 交换矩阵两行位置
+ * @param a 矩阵a
+ * @param row1 交换的行数
+ * @param row2 交换的列数
+ * @return 交换后的矩阵
+*/
+Matrix transrow(Matrix a,int row1,int row2);
+
+/**
+ * @brief 用第一行消元其余行
+ * @param a 矩阵a
+ * @param m 第i行i列的元素
+ * @return 化简后的矩阵
+*/
+Matrix gass(Matrix a,int m);
+
+/**
+ * @brief 删去矩阵第一行第一列
+ * @param a 矩阵a
+ * @return 删去后的矩阵
+*/
+Matrix del(Matrix a);
 
 #endif

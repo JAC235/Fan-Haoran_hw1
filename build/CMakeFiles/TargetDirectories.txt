@@ -1,0 +1,3 @@
+/Users/bangong/Desktop/git/Fan-Haoran_hw1/build/CMakeFiles/main.dir
+/Users/bangong/Desktop/git/Fan-Haoran_hw1/build/CMakeFiles/edit_cache.dir
+/Users/bangong/Desktop/git/Fan-Haoran_hw1/build/CMakeFiles/rebuild_cache.dir
