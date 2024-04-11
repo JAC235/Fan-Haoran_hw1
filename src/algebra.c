@@ -222,7 +222,7 @@ Matrix inv_matrix(Matrix a)
             {
                 d = cof(a,i,j);
                 det = det_matrix(d);
-                c.data[i][j] = pow(-1,i+j) * det;
+                c.data[i][j] = ((i+j)%2 ? -1:1) * det;
             }
         }
         //转置
