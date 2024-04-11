@@ -152,29 +152,13 @@ double det_matrix(Matrix a)
             {
                 int row,col;
                 double sum = 0;
-                int i,j,n,k;
-                row = a.rows - 1;
-                col = a.cols - 1;
-                Matrix c = create_matrix(row,col);
-                for (n = 0; n < row; n++)
+                int n;
+                for (n = 0; n < a.rows; n++)
                 {
                     //求余子式
-                    for(i=0; i<row; i++)
-                    {
-                        for (j=0,k=0; k<col; j++,k++)
-                        {
-                            if (j == n)
-                            {
-                                j++;
-                            }
-                                           
-                            c.data[i][j] = a.data[i+1][j];
-
-                        }
-                    
-                    }
+                    Matrix c = cof(a,0,n);
                     //求代数余子式之和
-                    sum += (n%2?-1:1) * a.data[0][n] * det_matrix(c);
+                    sum += (n % 2? -1:1) * a.data[0][n] * det_matrix(c);
                 }
                 
                 return sum;
@@ -315,22 +299,26 @@ Matrix cof(Matrix a, int row1, int col1)
     col = a.cols - 1;
     Matrix c = create_matrix(row,col);
     //求余子式
-    for(i=0,n=0; i<row; i++,n++)
+    i = 0;
+    for(n=0 ;n<a.rows; n++ )
     {
+        
         if(n == row1)
         {
-            n++;
+            continue;
         }
-        for (j=0,k=0; j<col; j++,k++)
+        j = 0;
+        for (k=0 ; k<a.cols; k++)
         {
             if (k == col1)
             {
-                k++;
+                continue;
                }
                       
             c.data[i][j] = a.data[n][k];
+            j++;
         }
-                    
+        i++;    
     }
     return c;
         
